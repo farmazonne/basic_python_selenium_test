@@ -14,6 +14,7 @@ search_button.click()
 
 #check
 assert 'Test automation' in driver.title
+assert 'Test automation ' in driver.title
 
 #afterAll
 driver.quit()
