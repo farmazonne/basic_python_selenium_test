@@ -1,7 +1,16 @@
 from selenium import webdriver
+import time
 
 driver = webdriver.Chrome("C:/Users/farmazonne/Desktop/PythonCourse/chromedriver")
-driver.get("https://www.wikipedia.org/")
+driver.get("https://accounts.google.com/")
+driver.implicitly_wait(10)
+
+
+first_name_field = driver.find_element_by_id("firstName")
+last_name_field = driver.find_element_by_id("lastName")
+password_field = driver.find_element_by_name("Passwd")
+confirm_field = driver.find_element_by_name("ConfirmPasswd")
+username_field = driver.find_element_by_id("username")
 
 #controls
 search_field = driver.find_element_by_id('searchInput')
