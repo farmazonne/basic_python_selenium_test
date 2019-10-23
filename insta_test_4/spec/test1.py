@@ -20,6 +20,6 @@ main_page.click_result_with_text("#fitness")
 
 search_page = SearchResultPage(driver)
 time.sleep(5)
-assert "Follow" in search_page.get_button_text()
+search_page.check_button_text("Follow")
 
 driver.quit()

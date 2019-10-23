@@ -9,5 +9,6 @@ class SearchResultPage(BasePage):
     def _verify_page(self):
         self.on_this_page(self.BUTTON_FOLLOW)
 
-    def get_button_text(self):
-        return self.get_text(self.BUTTON_FOLLOW)
+    def check_button_text(self, text):
+        value = self.get_text(self.BUTTON_FOLLOW)
+        assert text in value
